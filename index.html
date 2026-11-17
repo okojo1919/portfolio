@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>okojo1919 — Portfolio</title>
+<meta name="description" content="データ分析とAI活用の制作・検証記録。Kaggleコンペティション、競馬データ分析、Webアプリ開発。">
+<style>
+  :root { --fg:#1a1a2e; --muted:#5a5a72; --accent:#2563eb; --bg:#ffffff; --card:#f6f7fb; --line:#e3e5ee; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif; color: var(--fg); background: var(--bg); line-height: 1.8; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 48px 20px 80px; }
+  header { margin-bottom: 48px; }
+  h1 { font-size: 2rem; letter-spacing: .02em; }
+  .role { color: var(--accent); font-weight: 600; margin-top: 4px; }
+  .lead { color: var(--muted); margin-top: 16px; }
+  h2 { font-size: 1.25rem; border-bottom: 2px solid var(--line); padding-bottom: 6px; margin: 44px 0 20px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px; margin-bottom: 16px; }
+  .card h3 { font-size: 1.05rem; margin-bottom: 6px; }
+  .card p { color: var(--muted); font-size: .95rem; }
+  .tags { margin-top: 10px; }
+  .tag { display: inline-block; font-size: .75rem; background: #e8edfd; color: var(--accent); border-radius: 999px; padding: 2px 10px; margin-right: 6px; }
+  ul.skills { list-style: none; }
+  ul.skills li { padding: 6px 0; border-bottom: 1px dashed var(--line); }
+  ul.skills li:last-child { border-bottom: none; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  footer { margin-top: 60px; color: var(--muted); font-size: .85rem; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>okojo1919</h1>
+    <p class="role">データ分析 / AI活用 / Webアプリ開発</p>
+    <p class="lead">大学で経済学を学び、現在はデータ分析コンペティションと個人開発に取り組んでいます。「主張をそのまま信じず、再現と検証で裏付ける」を作業の原則にしています。</p>
+  </header>
+
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>Kaggle コンペティション（アカウント: hazard1919）</h3>
+    <p>Featuredコンペティションに参加中。公開ノートブックの再現検証を専門的に行い、「著者の申告スコア」ではなく「公開入力だけでスコア構成が再現できるか」を採用基準にしています。再現が成立した解法は出典クレジット付きで公開する方針です。対象領域は分子同定（質量スペクトル）、LLM推論、量子回路コンパイルなど。</p>
+    <div class="tags"><span class="tag">Python</span><span class="tag">機械学習</span><span class="tag">再現検証</span></div>
+  </div>
+
+  <div class="card">
+    <h3>競馬データ分析（3年分・5,693レース）</h3>
+    <p>JRA公式データを自前で収集し、人気オッズに基づく購入ルールの回収率を検証。2026年に回収率116%を示した条件が、2024・2025年のデータでは再現しない（合算70.6%）ことを確認し、「その年固有の上振れ」と結論づけました。続いて馬ごとの確率モデル（LightGBM、ウォークフォワード検証）を構築し、市場オッズ単体の予測精度を超えられないことを実測で確認。都合の悪い結果も含めて記録する検証姿勢の実践例です。</p>
+    <div class="tags"><span class="tag">Python</span><span class="tag">LightGBM</span><span class="tag">統計的検証</span></div>
+  </div>
+
+  <div class="card">
+    <h3>競馬ルール判定・収支トラッカー（Webアプリ）</h3>
+    <p>オッズを入力すると購入ルールで自動判定し、記録と収支・回収率を集計するWebアプリ。1,783レース分の過去データ分析（期間切替つき）を搭載。</p>
+    <div class="tags"><span class="tag">Webアプリ</span><span class="tag">データ可視化</span></div>
+  </div>
+
+  <div class="card">
+    <h3>Baseball OPS Calculator（<a href="https://github.com/okojo1919/keke">keke</a>）</h3>
+    <p>野球のOPS（出塁率＋長打率）を計算するシンプルなツール。GitHubで公開中。</p>
+    <div class="tags"><span class="tag">GitHub公開</span></div>
+  </div>
+
+  <div class="card">
+    <h3>iPhoneアプリ開発（hgwalk-ios）</h3>
+    <p>レトロゲーム周辺機器の体験をiPhone上で再現するアプリを開発。ROMやセーブデータなど権利物の配布物を含まない設計にしています。</p>
+    <div class="tags"><span class="tag">iOS</span><span class="tag">個人開発</span></div>
+  </div>
+
+  <h2>Skills</h2>
+  <ul class="skills">
+    <li><strong>Python / データ分析</strong> — データ収集・整形、統計的検証、LightGBMによるモデル構築と評価</li>
+    <li><strong>AI活用</strong> — LLMエージェントを使った開発・調査のワークフロー設計と運用</li>
+    <li><strong>Git / GitHub</strong> — バージョン管理、コードと実験記録の整理・公開</li>
+    <li><strong>検証の作法</strong> — 再現実験、ホールドアウト検証、結果が悪くても記録して結論を更新すること</li>
+  </ul>
+
+  <h2>Links</h2>
+  <p><a href="https://github.com/okojo1919">GitHub — okojo1919</a></p>
+
+  <footer>Hosted on Cloudflare Pages</footer>
+</div>
+</body>
+</html>
